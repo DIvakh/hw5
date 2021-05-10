@@ -17,12 +17,17 @@
             flag ? (result = str + added) : (result = added + str);
           }
         } else {
-          result = str;
+          flag
+            ? (result = str.slice(0, str.length - len))
+            : (result = str.slice(len, str.length));
         }
         console.log(result);
       }
 
-      padString("apple", 10, "*", true);
+      padString("unforgettable", 5, "*", true);
+      padString("unforgettable", 5, "*", false);
+      padString("unforgettable", 15, "*", true);
+      padString("unforgettable", 15, "*", false);
     </script>
   </body>
 </html>
