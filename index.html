@@ -14,7 +14,7 @@
           var added = "";
           for (i = 0; i < numberOfSymbols; i++) {
             added += sym;
-            flag == true ? (result = str + added) : (result = added + str);
+            flag ? (result = str + added) : (result = added + str);
           }
         } else {
           result = str;
