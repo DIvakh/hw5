@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW5</title>
+  </head>
+  <body>
+    <script>
+      function padString(str, len, sym, flag) {
+        if (len > str.length) {
+          var numberOfSymbols = len - str.length;
+          var added = "";
+          for (i = 0; i < numberOfSymbols; i++) {
+            added += sym;
+            flag == true ? (result = str + added) : (result = added + str);
+          }
+        } else {
+          result = str;
+        }
+        console.log(result);
+      }
+
+      padString("apple", 10, "*", true);
+    </script>
+  </body>
+</html>
