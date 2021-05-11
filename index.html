@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-      function padString(str, len, sym, flag) {
+      function padString(str, len, sym, flag = true) {
         if (len > str.length) {
           var numberOfSymbols = len - str.length;
           var added = "";
@@ -17,17 +17,12 @@
             flag ? (result = str + added) : (result = added + str);
           }
         } else {
-          flag
-            ? (result = str.slice(0, str.length - len))
-            : (result = str.slice(len, str.length));
+          result = str;
         }
-        console.log(result);
+        alert(result);
       }
 
-      padString("unforgettable", 5, "*", true);
-      padString("unforgettable", 5, "*", false);
-      padString("unforgettable", 15, "*", true);
-      padString("unforgettable", 15, "*", false);
+      padString("apple", 10, "*");
     </script>
   </body>
 </html>
