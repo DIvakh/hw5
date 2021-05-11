@@ -19,10 +19,13 @@
         } else {
           result = str;
         }
-        alert(result);
+        return result;
       }
 
-      padString("apple", 10, "*");
+      console.log(padString("apple", 5, "*"));
+      console.log(padString("apple", 10, "*"));
+      console.log(padString("apple", 5, "*", false));
+      console.log(padString("apple", 10, "*", false));
     </script>
   </body>
 </html>
